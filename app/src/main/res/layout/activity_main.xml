@@ -12,7 +12,8 @@
         android:text="@string/server_button"
         android:id="@+id/createBtn"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="toServerActivity" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -21,7 +22,8 @@
         android:text="@string/client_button"
         android:id="@+id/connectBtn"
         android:layout_below="@+id/createBtn"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="toClientActivity" />
 
     <Button
         style="?android:attr/buttonStyleSmall"

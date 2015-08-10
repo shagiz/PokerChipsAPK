@@ -5,4 +5,9 @@
     <string name="server_button">Start New Game</string>
     <string name="client_button">Connect</string>
     <string name="settings_button">Settings</string>
+    <string name="tournament_radio">tournament</string>
+    <string name="normal_radio">normal</string>
+    <string name="members">members</string>
+    <string name="startBtn">start</string>
+    <string name="connect_btn">CONNECT</string>
 </resources>
