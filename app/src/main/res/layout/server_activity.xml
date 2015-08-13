@@ -30,29 +30,16 @@
         android:text="@string/members"
         android:id="@+id/textView" />
 
-    <EditText
+    <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="numberSigned"
-        android:ems="10"
-        android:id="@+id/editText"
-        android:layout_gravity="center_horizontal"
-        android:enabled="true" />
+        android:id="@+id/spinner" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/startBtn"
-        android:id="@+id/start_button"
+        android:id="@+id/button"
         android:layout_gravity="right" />
-
-    <ProgressBar
-        style="?android:attr/progressBarStyleLarge"
-        android:layout_width="162dp"
-        android:layout_height="0dp"
-        android:id="@+id/progressBar"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="0.33"
-        android:indeterminate="false" />
 
 </LinearLayout>
