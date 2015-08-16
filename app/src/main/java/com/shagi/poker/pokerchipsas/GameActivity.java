@@ -9,9 +9,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by Shagi on 10.08.2015.
- */
+
 public class GameActivity extends Activity{
     final String ATTRIBUTE_NAME_NAME="name";
     final String ATTRIBUTE_NAME_BALANCE="balance";
