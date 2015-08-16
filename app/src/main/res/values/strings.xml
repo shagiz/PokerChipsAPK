@@ -10,4 +10,14 @@
     <string name="members">members</string>
     <string name="startBtn">start</string>
     <string name="connect_btn">CONNECT</string>
+    <string name="playerName">Name:</string>
+    <string name="balance">Balance:</string>
+    <string name="moveTextView">Move:</string>
+    
+    <string name="call_btn">CALL</string>
+    <string name="rise_btn">RISE</string>
+    <string name="fold_btn">FOLD</string>
+    <string name="allin_btn">ALL-IN</string>
+    <string name="check_btn">CHECK</string>
+    <string name="Jackpot">jackpot</string>
 </resources>

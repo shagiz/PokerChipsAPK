@@ -47,6 +47,7 @@
         android:layout_height="wrap_content"
         android:text="@string/startBtn"
         android:id="@+id/button"
-        android:layout_gravity="right" />
+        android:layout_gravity="right"
+        android:onClick="toGame" />
 
 </LinearLayout>
