@@ -11,17 +11,21 @@ import android.widget.Spinner;
  * Created by Shagi on 10.08.2015.
  */
 public class ServerActivity extends Activity{
-    String[] data = {"1", "2", "3", "4", "5","6","7","8","9"};
+    String[] memberCount = { "2", "3", "4", "5","6","7","8","9"};
+    String[] server_mode = {"solo", "bluetooth server", "wi-fi"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.server_activity);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, data);
-        adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
 
-        Spinner spinner=(Spinner) findViewById(R.id.spinner);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, memberCount);
+
+        Spinner spinner=(Spinner) findViewById(R.id.mebers_spinner);
         spinner.setAdapter(adapter);
-        spinner.setPrompt("Title");
+
+        adapter=new ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item, server_mode);
+        spinner=(Spinner) findViewById(R.id.server_mode);
+        spinner.setAdapter(adapter);
 
     }
 
