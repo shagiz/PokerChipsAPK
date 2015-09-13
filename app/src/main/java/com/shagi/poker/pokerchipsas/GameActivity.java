@@ -11,6 +11,7 @@ import java.util.Map;
 
 
 public class GameActivity extends Activity{
+
     final String ATTRIBUTE_NAME_NAME="name";
     final String ATTRIBUTE_NAME_BALANCE="balance";
     final String ATTRIBUTE_NAME_MOVE="move";

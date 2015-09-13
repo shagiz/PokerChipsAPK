@@ -28,7 +28,7 @@ public class ServerActivity extends Activity{
     }
 
     public void toGame(View view){
-        Intent intent=new Intent(this,GameActivity.class);
+        Intent intent=new Intent(this,GameActivityDemo.class);
         startActivity(intent);
     }
 

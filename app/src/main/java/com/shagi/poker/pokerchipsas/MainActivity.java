@@ -3,9 +3,9 @@ package com.shagi.poker.pokerchipsas;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 
 
 public class MainActivity extends Activity {
@@ -25,5 +25,9 @@ public class MainActivity extends Activity {
     public void toClientActivity(View view){
         intent=new Intent(this,ClientActivity.class);
         startActivity(intent);
+    }
+
+    public void log4btn(View view){
+        Log.d("TEST","ТУТ КНОПКА");
     }
 }

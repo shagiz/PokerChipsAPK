@@ -4,5 +4,7 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
     </style>
-
+    <style name="HabraTheme" parent="@android:style/Theme.Black">
+        <item name="android:background">@color/blue</item>
+    </style>
 </resources>
