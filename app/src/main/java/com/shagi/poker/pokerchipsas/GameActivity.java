@@ -2,48 +2,59 @@ package com.shagi.poker.pokerchipsas;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.widget.ListView;
-import android.widget.SimpleAdapter;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.WindowManager;
+import android.widget.TextView;
 
 
-public class GameActivity extends Activity{
 
-    final String ATTRIBUTE_NAME_NAME="name";
-    final String ATTRIBUTE_NAME_BALANCE="balance";
-    final String ATTRIBUTE_NAME_MOVE="move";
 
-    ListView lvSimple;
+public class GameActivity extends Activity implements View.OnTouchListener {
+
+    TextView tv;
+    float x;
+    float y;
+    String sDown;
+    String sMove;
+    String sUp;
+
+    /** Called when the activity is first created. */
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        tv = new TextView(this);
+        tv.setOnTouchListener(this);
+        setContentView(tv);
+    }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.game_activity);
-
-        String[] names={"Name1","Player2","Test3"};
-        String[] balance={"1000","2000","1500"};
-        String[] move={"fold 1000","rise 150","call"};
-
-        ArrayList<Map<String,Object>> data=new ArrayList<>(names.length);
-        Map<String,Object> m;
-        for (int i = 0; i < 9; i++) {
-            m=new HashMap<>();
-            m.put(ATTRIBUTE_NAME_NAME,names[i%3]);
-            m.put(ATTRIBUTE_NAME_BALANCE,balance[i%3]);
-            m.put(ATTRIBUTE_NAME_MOVE,move[i%3]);
-            data.add(m);
+    public boolean onTouch(View v, MotionEvent event) {
+        x = event.getX();
+        y = event.getY();
+        String ok;
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN: // нажатие
+                sDown = "Down: " + x + "," + y;
+                sMove = ""; sUp = "";
+                break;
+            case MotionEvent.ACTION_MOVE: // движение
+                sMove = "Move: " + x + "," + y;
+                break;
+            case MotionEvent.ACTION_UP: // отпускание
+            case MotionEvent.ACTION_CANCEL:
+                sMove = "";
+                sUp = "Up: " + x + "," + y;
+                break;
         }
-
-        String[] from={ATTRIBUTE_NAME_NAME,ATTRIBUTE_NAME_BALANCE,ATTRIBUTE_NAME_MOVE};
-        int[] to={R.id.playerNameTxt,R.id.balance_txtv,R.id.move_txt};
-
-        SimpleAdapter simpleAdapter=new SimpleAdapter(this, data,R.layout.player_item,from,to);
-
-        lvSimple=(ListView) findViewById(R.id.lvSimple);
-        lvSimple.setAdapter(simpleAdapter);
-
+        if (y>=0.98*x+1562){
+            ok="РОБИТ";
+        }else {
+            ok="НЕ РОБИТ";
+        }
+        tv.setText(sDown + "\n" + sMove + "\n" + sUp+"\n"+ok);
+        return true;
     }
 }
