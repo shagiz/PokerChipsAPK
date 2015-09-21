@@ -1,4 +1,4 @@
-package com.shagi.poker.pokerchipsas;
+package com.shagi.poker.pokerchipsas.Activities;
 
 import android.content.Context;
 import android.graphics.Canvas;

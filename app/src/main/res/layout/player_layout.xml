@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/program_frame"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dip">
+
+    <TextView
+        android:id="@+id/player_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dip"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:singleLine="true"
+        android:text="Дымка в Москве" />
+
+    <TextView
+        android:id="@+id/player_move"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/player_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dip"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:text="Скандалы, Интриги, Расследования!" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="DPIPOPOOPOP"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:id="@+id/player_bank"
+        android:layout_below="@id/player_move"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

@@ -1,9 +1,11 @@
-package com.shagi.poker.pokerchipsas;
+package com.shagi.poker.pokerchipsas.Activities;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import com.shagi.poker.pokerchipsas.R;
 
 /**
  * Created by Shagi on 10.08.2015.

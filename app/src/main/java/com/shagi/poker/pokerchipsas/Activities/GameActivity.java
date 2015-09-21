@@ -1,4 +1,4 @@
-package com.shagi.poker.pokerchipsas;
+package com.shagi.poker.pokerchipsas.Activities;
 
 import android.app.Activity;
 import android.os.Bundle;
