@@ -1,8 +1,7 @@
-package com.shagi.poker.pokerchipsas.severmode;
+package com.shagi.poker.pokerchipsas.BluetoothServer;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
-import android.bluetooth.BluetoothServerSocket;
 import android.bluetooth.BluetoothSocket;
 import android.util.Log;
 

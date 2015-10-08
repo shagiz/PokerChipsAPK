@@ -1,4 +1,4 @@
-package com.shagi.poker.pokerchipsas.severmode;
+package com.shagi.poker.pokerchipsas.BluetoothServer;
 
 import java.io.IOException;
 import java.io.InputStream;

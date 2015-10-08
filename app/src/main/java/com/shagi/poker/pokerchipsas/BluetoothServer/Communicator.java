@@ -1,4 +1,4 @@
-package com.shagi.poker.pokerchipsas.severmode;
+package com.shagi.poker.pokerchipsas.BluetoothServer;
 
 
 interface Communicator {
